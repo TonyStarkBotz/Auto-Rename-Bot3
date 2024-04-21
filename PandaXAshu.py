@@ -53,7 +53,7 @@ class Bot(Client):
 
     async def send_periodic_message(self):
         while True:
-            await asyncio.sleep(25200)  # 7 hours in seconds
+            await asyncio.sleep(25)  # 7 hours in seconds
             try:
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
