@@ -54,7 +54,7 @@ class Bot(Client):
                 print(f"Error sending initial restart message: {e}")
 
     async def redeploy_app(self):
-        await asyncio.sleep(25200)  # 7 hours in seconds
+        await asyncio.sleep(10)  # 7 hours in seconds
         try:
             response = requests.post('https://api.render.com/v1/owner/srv-coillftjm4es739qjnk0/services/srv-coillftjm4es739qjnk0/deploy', headers={'Authorization': 'Bearer hC6xRth8Rag'})
             if response.status_code == 200:
