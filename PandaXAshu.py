@@ -6,7 +6,6 @@ from pyrogram.raw.all import layer
 from config import Config
 from aiohttp import web
 from route import web_server
-import requests
 
 class Bot(Client):
 
@@ -38,7 +37,7 @@ class Bot(Client):
             except: 
                 pass
         
-        # Schedule the task to send the message and redeploy after 7 hours
+        # Schedule the task to send the message every 7 hours
         asyncio.create_task(self.send_periodic_message())
 
         # Send initial restart message if logging channel is configured
@@ -54,19 +53,14 @@ class Bot(Client):
 
     async def send_periodic_message(self):
         while True:
-            await asyncio.sleep(30)  # 7 hours in seconds
+            await asyncio.sleep(25200)  # 7 hours in seconds
             try:
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
                 await self.send_message(Config.LOG_CHANNEL, f"Hello! It's been 7 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")  
-                # Redeploy the Render app
-                response = requests.post('https://api.render.com/v1/owner/srv-coillftjm4es739qjnk0/services/srv-coillftjm4es739qjnk0/deploy', headers={'Authorization': 'Bearer hC6xRth8Rag'})
-                if response.status_code == 200:
-                    print("Render app redeployed successfully.")
-                else:
-                    print(f"Failed to redeploy Render app. Status code: {response.status_code}")
+                await self.stop() # Close the bot after sending the message                              
             except Exception as e:
-                print(f"Error sending message or redeploying app: {e}")
+                print(f"Error sending message: {e}")
 
 Bot().run()
