@@ -58,7 +58,7 @@ class Bot(Client):
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
-                await self.send_message(Config.LOG_CHANNEL1, f"Hello! It's been 7 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")  
+                await self.send_message(Config.LOG_CHANNEL1, f"Hello! ADMINE I AM {me.mention} PLZ Restarted It's been 7 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")  
                 await self.stop() # Close the bot after sending the message                              
             except Exception as e:
                 print(f"Error sending message: {e}")
