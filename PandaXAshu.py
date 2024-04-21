@@ -1,5 +1,4 @@
-import asyncio
-from datetime import datetime, timedelta
+from datetime import datetime
 from pytz import timezone
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
@@ -32,35 +31,22 @@ class Bot(Client):
             await web.TCPSite(app, "0.0.0.0", 8080).start()     
         print(f"{me.first_name} Is Started.....✨️")
         for id in Config.ADMIN:
-            try: 
-                await self.send_message(Config.LOG_CHANNEL, f"**{me.first_name}  Is Started.....✨️**")                                
-            except: 
-                pass
-        
-        # Schedule the task to send the message every 7 hours
-        asyncio.create_task(self.send_periodic_message())
-
-        # Send initial restart message if logging channel is configured
+            try: await self.send_message(Config.LOG_CHANNEL, f"**{me.first_name}  Is Started.....✨️**")                                
+            except: pass
         if Config.LOG_CHANNEL:
             try:
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
                 await self.send_message(Config.LOG_CHANNEL, f"**{me.mention} Is Restarted !!**\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`</b>")                                
-            except Exception as e:
+            except:
                 print("Please Make This Is Admin In Your Log Channel")
-                print(f"Error sending initial restart message: {e}")
-
-    async def send_periodic_message(self):
-        while True:
-            await asyncio.sleep(25)  # 7 hours in seconds
-            try:
-                curr = datetime.now(timezone("Asia/Kolkata"))
-                date = curr.strftime('%d %B, %Y')
-                time = curr.strftime('%I:%M:%S %p')
-                await self.send_message(Config.LOG_CHANNEL1, f"Hello! ADMINE I AM {me.mention} PLZ Restarted It's been 7 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")  
-                await self.stop() # Close the bot after sending the message                              
-            except Exception as e:
-                print(f"Error sending message: {e}")
 
 Bot().run()
+
+
+
+# PandaWep
+# Don't Remove Credit 🥺
+# Telegram Channel @PandaWep
+# Developer https://github.com/PandaWep
