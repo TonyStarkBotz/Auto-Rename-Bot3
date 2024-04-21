@@ -51,15 +51,18 @@ class Bot(Client):
                 print("Please Make This Is Admin In Your Log Channel")
                 print(f"Error sending initial restart message: {e}")
 
-    async def send_periodic_message(self):
-        while True:
-            await asyncio.sleep(100)  # 7 hours in seconds
-            try:
-                curr = datetime.now(timezone("Asia/Kolkata"))
-                date = curr.strftime('%d %B, %Y')
-                time = curr.strftime('%I:%M:%S %p')
-                await self.send_message(Config.LOG_CHANNEL, f"Hello! It's been 1 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")                                
-            except Exception as e:
-                print(f"Error sending message: {e}")
+  async def send_periodic_message(self):
+    while True:
+        await asyncio.sleep(30)  # 7 hours in seconds
+        try:
+            curr = datetime.now(timezone("Asia/Kolkata"))
+            date = curr.strftime('%d %B, %Y')
+            time = curr.strftime('%I:%M:%S %p')
+            await self.send_message(Config.LOG_CHANNEL, f"Hello! It's been 7 hours since the bot started.\n\n📅 Date : `{date}`\n⏰ Time : `{time}`\n🌐 Timezone : `Asia/Kolkata`\n\n🉐 Version : `v{__version__} (Layer {layer})`")                                
+        except Exception as e:
+            print(f"Error sending message: {e}")
+        else:
+            # Close the bot after sending the message
+            await self.stop()
 
 Bot().run()
