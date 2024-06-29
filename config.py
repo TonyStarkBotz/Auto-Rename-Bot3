@@ -3,13 +3,13 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "20519744")
-    API_HASH  = os.environ.get("API_HASH", "7c50a4e525de5fcd9756fba209d0c4e4")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7435133426:AAE-s6hl2JDlxujO6grePWSv_lOn8JzNMZ4") 
+    API_ID    = os.environ.get("API_ID", "")
+    API_HASH  = os.environ.get("API_HASH", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://Tonystarkbotz:Tonystarkbotz@missminutes.lbzdtkj.mongodb.net/?retryWrites=true&w=majority")
+    DB_URL  = os.environ.get("DB_URL","")
  
     # other configs
     BOT_UPTIME  = time.time()
@@ -36,9 +36,7 @@ class Txt(object):
     
 ➻ Use /tutorial Command To Know How To Use Me.
 
-<b>Bot Is Made By @PandaWep</b>
-
-<b>Bot Rapo:- <a href='https://github.com/AshutoshGoswami24/Auto-Rename-Bot'>AshutoshGoswami24/Auto-Rename-Bot.git</a></b>
+<b>Bot Is Made By @Tonystark_botz</b>
 """
     
     FILE_NAME_TXT = """<b><u>SETUP AUTO RENAME FORMAT</u></b>
@@ -48,7 +46,7 @@ Use These Keywords To Setup Custom File Name
 ✓ episode :- To Replace Episode Number
 ✓ quality :- To Replace Video Resolution
 
-<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @PandaWep </code>
+<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @MovieTimesTV </code>
 
 <b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code> """
     
@@ -56,10 +54,10 @@ Use These Keywords To Setup Custom File Name
 <b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
 <b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
 <b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>📢 Channel :</b> <a href='https://t.me/PandaWep'>PandaWep</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/PandaWep'>PandaWep</a>
+<b>📢 Channel :</b> <a href='https://t.me/MovieTimesTV'>Mᴏᴠɪᴇ Tɪᴍᴇs™</a>
+<b>🧑‍💻 Developer :</b> <a href='https://t.me/Tony_Stark_75'>Tᴏɴʏ Sᴛᴀʀᴋ</a>
     
-<b>♻️ Bot Made By :</b> @PandaWep"""
+<b>♻️ Bot Made By :</b> @Tonystark_botz"""
 
     
     THUMBNAIL_TXT = """<b><u>🖼️  HOW TO SET THUMBNAIL</u></b>
@@ -80,25 +78,15 @@ Use These Keywords To Setup Custom File Name
 <b>⏳️ Done</b> : {0}%
 <b>🚀 Speed</b> : {3}/s
 <b>⏰️ ETA</b> : {4} 
-<b>🥺 Plz Joine : @PandaWep"""
+<b>🥺 Plz Join : @MovieTimes_TV"""
     
     
     DONATE_TXT = """<b>🥲 Thanks For Showing Interest In Donation! ❤️</b>
     
 If You Like My Bots & Projects, You Can 🎁 Donate Me Any Amount From 10 Rs Upto Your Choice.
     
-<b>My UPI - PandaWep@ybl</b> """
+<b>My UPI - as0366987@oksbi</b> """
     
     HELP_TXT = """<b>Hey</b> {}
     
-Joine @PandaWep To Help """
-
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @PandaWep
-# Developer @AshutoshGoswami24
-
+Join @Tonystark_botz To Help """
