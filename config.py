@@ -85,7 +85,7 @@ Use These Keywords To Setup Custom File Name
     
 If You Like My Bots & Projects, You Can 🎁 Donate Me Any Amount From 10 Rs Upto Your Choice.
     
-<b>My UPI - as0366987@oksbi</b> """
+<b>My UPI - abhisheksaini24206@oksbi</b> """
     
     HELP_TXT = """<b>Hey</b> {}
     
