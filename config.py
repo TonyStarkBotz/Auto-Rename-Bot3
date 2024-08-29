@@ -79,7 +79,7 @@ Use These Keywords To Setup Custom File Name
 ┣⪼ ⏳️ Dᴏɴᴇ : {0}%
 ┣⪼ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ┣⪼ ⏰️ Eᴛᴀ: {4}
-┣⪼ 🥺 join Plz: @Avengers_Alliance
+┣⪼ 🥺 join Plz: @Marvelstudios75
 ╰━━━━━━━━━━━━━━━➣ </b>"""
     
     
