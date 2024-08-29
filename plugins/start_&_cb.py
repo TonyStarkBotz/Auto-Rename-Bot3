@@ -10,7 +10,7 @@ async def start(client, message):
     user = message.from_user
     await AshutoshGoswami24.add_user(client, message)                
     button = InlineKeyboardMarkup([[
-      InlineKeyboardButton('📢 Updates', url='https://t.me/Tonystark_botz'),
+      InlineKeyboardButton('📢 Updates', url='https://t.me/Avengers_Alliance'),
       InlineKeyboardButton('💬 Support', url='https://t.me/MovieTimesXDisc')
     ],[
       InlineKeyboardButton('⚙️ Help', callback_data='help'),
@@ -33,7 +33,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton('📢 Updates', url='https://t.me/Tonystark_botz'),
+                InlineKeyboardButton('📢 Updates', url='https://t.me/Avengers_Alliance'),
                 InlineKeyboardButton('💬 Support', url='https://t.me/MovieTimesXDisc')
                 ],[
                 InlineKeyboardButton('⚙️ Help', callback_data='help'),
