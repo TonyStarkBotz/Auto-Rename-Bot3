@@ -1,2 +1,2 @@
-web: python3 bot.py
+web: python3 PandaXAshu.py
 worker: python3 PandaXAshu.py
